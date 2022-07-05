@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  color: black;
+  background-color: #fff;
+}
+.App-logo {
+  width: 100px;
+  height: 100px;
+}
+.App-cart {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.App-cart:hover {
+  background-color: #015a08;
+  color: #fff;
+}
+.btn-cart {
+  color: rgba(255, 255, 255, 0.555);
+  background-color: #015a08;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px red;
+  font-size: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.bg-nav {
+  background-color: #d70101;  
+}
+.itemLista{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.detail-nombre{
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.detail-precio{
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.imagen{
+  width: 250px;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagen:hover{
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #015a08;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.linea {
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 1px solid #df0f0fa4;
+  padding-bottom: .8rem;
+}
+
+.footer-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+
+.text-footer {
+  color: rgba(255, 255, 255, .5);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.column {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 576px) {
+  .text-footer {
+      font-size: 12.6px !important;
+  }
+}
+.cardText{
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.empty-cart {
+  padding: 20px;
+}
+.cart-item {
+  width: 80%;
+}
+.cart-item-img, .cart-item-qty, .cart-item-price, .cart-item-remove, .cart-item-total {
+  width: 10%;
+  text-align: center;
+}
+.cart-item-img img {
+  max-width: 70px;
+  max-height: 70px;
+  margin-bottom: 20 px;
+}
+.cart-item-title {
+  width: 50%;
+}
+table, th, td {
+  border: 5px solid #ccc;
+}
+thead {
+  text-align: center;
+}
+.cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #df0f0fa4;
+  margin-bottom: 1rem;
+  
+
+}
+.cart-title {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 60px;
+}
+
+.cart-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+.cart-img{
+  width: 50px;
+}
+.boton {
+  background-color: #df0f0fa4;
+  border-radius: 8px;
+  border-style:dashed;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 30px;
+  padding: 15px 18px;
+  text-align: center;
+  margin: 5px;
+}
+.boton:hover {
+  background-color: #015a08;
+  color: #FFFFFF;
+}
+.cart-title{
+  font-size: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+.box {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #5E376D;
+}
+.bnt p{
+    border-radius: 6px;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    font-size: 22px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px;
+  
+}
+@media screen and (max-width: 768px) {
+  .item-detail-contenedor {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  .item-detail-info {
+      text-align: center;
+      margin: 0 -15% 0 15%;
+  }
+  .item-detail-featured-img {
+      border: 10px solid #fff;  
+      height: 300px;
+      width: 300px;
+      margin: 20px;
+      overflow: hidden;
+      border-radius: 10px;
+ 
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .item-detail-contenedor {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .item-detail-img {
+      cursor: pointer;
+  }
+  .item-detail-featured-img {
+      border: 10px solid #fff;  
+      height: 400px;
+      width: 400px;
+      margin: 20px;
+      overflow: hidden;
+ 
+  }
+}
+
+.item-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 3 rem;
+  color: #1b1b1b;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.item-detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  padding-left: 20px;
+  border: #1b1b1b solid 5px;
+  border-radius: 10px;
+  color: rgb(250, 10, 10);
+  background-image: url(https://i.imgur.com/wb8mhyB.png);
+}
+.item-detail-info p {
+  font-size: 14px;
+  color: white;
+  padding-right: 5%;
+  color:  #fff;
+  background-color: #015a08;
+
+}
+.item-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 3 rem;
+  color: #1b1b1b;
+}
+
+
+.formulario {
+	width: 75%;
+	margin-top: 50px;
+  margin-left: 125px;
+	background: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+}
+
+.formulario > div {
+	margin-bottom: 20px;
+}
+
+.formulario label {
+	display: block;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.formulario input,
+.formulario textarea {
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-radius: 5px;
+	border: 2px solid #e2e2e2;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.formulario input:focus {
+	outline: none;
+	border: 2px solid #0085FF;
+}
+
+.formulario .error {
+	color: #e92b2d;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.formulario button[type="submit"] {
+	display: block;
+	background: #0085FF;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	transition: .3s ease all;
+}
+
+.order {
+  background: #02a802;
+  color: black;
+}
+.sentOrder {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.checkoutBox {
+  margin: 10% 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
