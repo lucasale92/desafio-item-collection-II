@@ -4,12 +4,12 @@ import { Card } from "react-bootstrap";
 
 export default function Item ({ producto })  {
   return (    
-<Card className="imagen">
+<Card className="card" style={{ width: '20rem' }}>
 <Card.Body>
-    <Card.Title className="cart-title">{producto.name}</Card.Title>
+    <Card.Title className="lineClamp">{producto.name}</Card.Title>
 
-    <Card.Text className="cardText">
-    <Card.Img variant="top" src={producto.img} />
+    <Card.Img variant="top" src={producto.img} className="imagen"/>
+    <Card.Text className="smallTxt">
       {producto.description}
       <br />
       Precio: ${producto.price}

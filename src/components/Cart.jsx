@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useEffect} from 'react'
+import { useContext,} from 'react'
 import {CartContext} from '../context/CartContext'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap';
@@ -7,23 +7,19 @@ import {Button} from 'react-bootstrap';
 
 
 export default function Cart() {
-    const {cart, emptyCart, getCartTotal, removeFromCart, storageCart} = useContext(CartContext);
+    const {cart, emptyCart, getCartTotal, removeFromCart,} = useContext(CartContext);
     const carritoVacio = cart.length === 0;
     
-    useEffect(() => {
-      storageCart();
-    }
-    , [])
-    
+
   
     return (
       <>
-      <h2 className="cart-title">Mi Carrito</h2>
-      <div className="cart">
-      <table>
-        <thead>
+      <h2 className="title">Mi Carrito</h2>
+      <div className='cart' >
+      <table className="table table-hover">
+        <thead className="table table-success">
           <tr>
-            <th className="header-image">Imágen</th>
+            <th className="header-image">imagen</th>
             <th>Producto</th>
             <th>Precio</th>
             <th>Cant</th>
@@ -34,14 +30,14 @@ export default function Cart() {
         <tbody>
           {(carritoVacio &&
             <tr>
-              <td colSpan="6" className="empty-cart">
+              <td colSpan="8"  className="emptyCart">
                 <h3>No hay productos en el carrito</h3>
               </td>
             </tr>
           ) || 
           cart.map(item => (              
             <tr className="cart-item" key={item.id}>
-              <td className="cart-img">
+              <td className="cart-item-img">
                 <img src={item.img} alt={item.name} width={250} />
               </td>
               <td className="cart-item-title">

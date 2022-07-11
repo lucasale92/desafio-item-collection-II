@@ -1,9 +1,15 @@
-import { createContext, useState  } from "react";
+import { createContext, useState, useEffect  } from "react";
 export const CartContext = createContext();
 
 const MyProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([]);
+
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('productos')) ?? []);
+
+    useEffect(() => {
+            localStorage.setItem('productos', JSON.stringify(cart));
+      }, [cart]);
+
 
     //Metodo Some - ItemDetail - Si el producto a agregar ya está en el carrito o no (true/false)
     const isInCart = (id) => {
@@ -29,16 +35,7 @@ const MyProvider = ({ children }) => {
         }
     }
 
-    const storageCart = () => {
-        let arrayOfValues = Object.values(localStorage);
-        if (arrayOfValues.length > 0) {
-            let arrayOfProducts = [];
-            for (let i = 0; i < arrayOfValues.length; i++) {
-                arrayOfProducts.push(JSON.parse(arrayOfValues[i]));
-            }
-            setCart(arrayOfProducts);
-        }    
-    }
+
         //Vaciar el carrito con botón
     const emptyCart = () => {setCart([])     
                 
@@ -61,7 +58,7 @@ const MyProvider = ({ children }) => {
     }
 
     return (
-    <CartContext.Provider value={{cart, isInCart, addToCart, emptyCart, removeFromCart, getItemQuantity, getCartTotal, storageCart }}> 
+    <CartContext.Provider value={{cart, isInCart, addToCart, emptyCart, removeFromCart, getItemQuantity, getCartTotal,}}> 
     {children}
     </CartContext.Provider>
     )

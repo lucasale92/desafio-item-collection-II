@@ -31,7 +31,7 @@ export default function  ItemDetailContainer ()  {
   }
   
   return (
-    <div className="container my-5">  
+    <div className="container my-5 itemCard">  
       {<ItemDetail detail={producto} id={id}/>}
     </div>
   );

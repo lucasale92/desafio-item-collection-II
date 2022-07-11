@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar';
 import MyProvider from './context/CartContext';
-
+import Contacto from './components/Contacto';
 
 export default function App() {
   return ( <>
@@ -23,6 +23,7 @@ export default function App() {
         <Route path="/category/:id" element={<ItemListContainer />} />
         <Route path="/producto/:id" element={<ItemDetailContainer />} />
         <Route path="checkout" element={<Checkout/>} />
+        <Route path="/contacto" element={<Contacto/>}/>
         </Routes>
       <Footer />
       </MyProvider>

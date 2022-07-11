@@ -37,6 +37,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
 }
 .detail-nombre{
   font-size: 20px;
@@ -48,14 +52,32 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
+/* ////////////////////////////Cards////////////////////////////////////////////// */
 .imagen{
-  width: 250px;
-  margin: 1rem;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  height: 100 vh;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  
 }
 .imagen:hover{
   transform: scale(1.1);
+}
+/*Line clamp para reducir los títulos más largos de 2 líneas*/
+.lineClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+.smallTxt {
+font-size: 12px; font-weight: 600;
+}
+.card {
+  text-align: center;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 5px;
 }
 
 .footer {
@@ -112,57 +134,56 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
+/* //////////////////////////cart/////////////////////////// */
+@media screen and (max-width: 768px) {
+  .cart-item-img, .header-image {
+    display: none;
+  }    
+}
 .empty-cart {
-  padding: 20px;
+    padding: 20px;
 }
 .cart-item {
-  width: 80%;
+    width: 80%;
 }
 .cart-item-img, .cart-item-qty, .cart-item-price, .cart-item-remove, .cart-item-total {
-  width: 10%;
-  text-align: center;
+    width: 10%;
+    text-align: center;
 }
 .cart-item-img img {
-  max-width: 70px;
-  max-height: 70px;
-  margin-bottom: 20 px;
+    max-width: 70px;
+    max-height: 70px;
 }
 .cart-item-title {
-  width: 50%;
+    width: 50%;
 }
 table, th, td {
-  border: 5px solid #ccc;
+    border: 1px solid #ccc;
 }
 thead {
-  text-align: center;
+    text-align: center;
 }
 .cart {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 1.2rem;
-  color: #df0f0fa4;
-  margin-bottom: 1rem;
-  
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, Arial, sans-serif;
 }
-.cart-title {
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: bold;
-  margin: 60px;
+.title {
+    font-family: Montserrat, Arial, sans-serif;
+    color: #df0f0fa4;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    font-size: 3 rem;
 }
 
 .cart-footer {
-  margin-top: 30px;
-  text-align: center;
+    margin-top: 30px;
+    text-align: center;
 }
-.cart-img{
-  width: 50px;
-}
+
 .boton {
   background-color: #df0f0fa4;
   border-radius: 8px;
@@ -184,13 +205,7 @@ thead {
   background-color: #015a08;
   color: #FFFFFF;
 }
-.cart-title{
-  font-size: 3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bold;
-  text-decoration: underline;
 
-}
 .box {
   margin: 20px;
   display: flex;
@@ -386,4 +401,113 @@ thead {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.containerList {
+  margin: 20px 0 100px 0;
+}
+/* /////////////////////////////////IDC////////////////////////////// */
+@media screen and (max-width: 768px) {
+  .itemCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fff;
+      margin: 0 20px 80px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .itemCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 60%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+  }
+}
+/* 
+/////////////////////////Contacto////////////////////////////// */
+
+.contacto .contacto-acerca h3 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fd974f;
+}
+
+.contacto .contacto-acerca p {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  color: #888;
+}
+
+.contacto .social-links {
+  padding-bottom: 20px;
+}
+
+.contacto .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: #fff;
+  color: #c60000;
+  line-height: 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid #c60000;
+}
+
+.contacto .social-links a:hover {
+  background: #c60000;
+  color: #f2f9f8;
+}
+
+.contacto .info {
+  color: #777;
+}
+
+.icons{
+  font-size: 32px;
+  color: #000000fa;
+  float: left;
+  line-height: 1;
+}
+.iconsWhat{
+  font-size: 32px;
+  color: #000000fa;
+  float: center;
+  line-height: 1;
+}
+
+.contacto .info p {
+  padding: 0 0 10px 42px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.mapa {
+  padding: 0;
+  margin-bottom: -10px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 380px;
+}
+.section-bg {
+  background-color: #f2f9f8;
 }
