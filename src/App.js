@@ -8,14 +8,16 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar';
 import MyProvider from './context/CartContext';
 import Contacto from './components/Contacto';
+import {Animated} from 'react-animated-css';
 
 export default function App() {
   return ( <>
-    <div className="App"> 
-    <h1> Pastas Lau Estilo Casero</h1>    
-      <BrowserRouter>
+      <BrowserRouter>      
       <MyProvider>
-      <NavBar />
+      <NavBar/>     
+      <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
+      <h1 className="App"> Pastas Lau Estilo Casero</h1>        
+      </Animated>   
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/productos" element={<ItemListContainer />} />
@@ -30,7 +32,7 @@ export default function App() {
       </BrowserRouter>
 
     
-    </div> 
+    
     </>
   );
 }
