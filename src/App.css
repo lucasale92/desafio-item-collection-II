@@ -315,24 +315,27 @@ thead {
 }
 
 /* ////////////////////////Estilos de CheckOut////////////////////////////// */
-
-.checkoutBox {
+.checkout {
   margin: 10% 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.contenedor {
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
 
 .formulario {
-	width: 75%;
+	min-width: 600px;
 	margin-top: 50px;
-  margin-left: 75x;
 	background: #fff;
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
 }
 
 .formulario > div {
